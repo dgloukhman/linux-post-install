@@ -30,9 +30,6 @@ sudo apt update;
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin;
 sudo usermod -aG docker $USER;
 
-#ohmyzsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
-
 # set text editor
 sudo update-alternatives --set editor /usr/bin/vim.gtk3;
 
@@ -49,3 +46,10 @@ flatpak install -y flathub com.github.joseexposito.touche com.google.Chrome;
 
 # Autoremove
 sudo apt autoremove -y
+
+#ohmyzsh
+
+echo 'CHANGE SHELL'
+chsh -s $(which zsh);
+zsh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
+
