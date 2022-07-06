@@ -20,7 +20,7 @@ sudo apt install --yes\
 
 sudo mkdir -p /etc/apt/keyrings;
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --assumeyes --dearmor -o /etc/apt/keyrings/docker.gpg ;
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg ;
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -28,7 +28,6 @@ echo \
 
 sudo apt update;
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin;
-sudo usermod -aG docker $USER;
 
 # set text editor
 sudo update-alternatives --set editor /usr/bin/vim.gtk3;
