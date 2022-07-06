@@ -31,7 +31,6 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin;
 sudo usermod -aG docker $USER;
 
 #ohmyzsh
-chsh -s $(which zsh);
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 
 # set text editor
