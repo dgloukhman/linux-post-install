@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:agornostal/ulauncher
 sudo apt update;
 sudo apt upgrade --yes;
 
-sudo apt install --yes zsh vim-gtk3 git curl wget flatpak python3 ulauncher;
+sudo apt install --yes zsh vim-gtk3 git curl wget flatpak python3 ulauncher wmctrl;
 
 
 #docker
