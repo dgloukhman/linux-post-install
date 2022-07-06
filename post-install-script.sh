@@ -37,7 +37,7 @@ sudo update-alternatives --set editor /usr/bin/vim.gtk3;
 
 echo 'INSTALL APPS' 
 sudo snap install code --classic;
-sudo snap install bitwarden okular spotify discord telegram-desktop slack zoom-client whatsapp-for-linux;
+sudo snap install bitwarden okular spotify discord telegram-desktop slack zoom-client vlc;
 
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
