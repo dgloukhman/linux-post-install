@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:agornostal/ulauncher
 sudo apt update;
 sudo apt upgrade --yes;
 
-sudo apt install --yes zsh vim-gtk3 git curl wget flatpak python3 ulauncher wmctrl python3-pip;
+sudo apt install --yes zsh vim-gtk3 git curl wget flatpak python3 ulauncher wmctrl python3-pip tilix touchegg input-remapper ubuntu-restricted-extras;
 
 
 #docker
@@ -35,7 +35,8 @@ sudo update-alternatives --set editor /usr/bin/vim.gtk3;
 #apps
 
 echo 'INSTALL APPS' 
-sudo snap install code --classic;
+sudo snap install code node --classic;
+
 sudo snap install bitwarden okular spotify discord telegram-desktop slack zoom-client vlc;
 
 
