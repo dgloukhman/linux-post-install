@@ -2,14 +2,32 @@
 
 
 #repos
-
 sudo add-apt-repository ppa:agornostal/ulauncher
 
+#system apps
 sudo apt update;
 sudo apt upgrade --yes;
 
-sudo apt install --yes zsh vim-gtk3 git curl wget flatpak python3 ulauncher wmctrl python3-pip tilix touchegg input-remapper ubuntu-restricted-extras;
-
+sudo apt install --yes \
+	zsh \
+       	vim-gtk3 \
+       	git \
+       	curl \
+       	wget \
+       	flatpak \
+       	python3 \
+       	python3-pip \
+       	python3-venv \
+       	ulauncher \
+       	wmctrl \
+      	tilix \
+       	touchegg \
+       	input-remapper \
+       	ubuntu-restricted-extras \
+	gparted \
+	timeshift \
+	wifi-qr \
+	;
 
 #docker
 sudo apt install --yes\
@@ -37,7 +55,16 @@ sudo update-alternatives --set editor /usr/bin/vim.gtk3;
 echo 'INSTALL APPS' 
 sudo snap install code node --classic;
 
-sudo snap install bitwarden okular spotify discord telegram-desktop slack zoom-client vlc;
+sudo snap install \
+       	bitwarden \
+       	okular \
+       	spotify \
+       	discord \
+       	telegram-desktop \
+       	slack \
+       	zoom-client \
+       	vlc \
+		;
 
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
