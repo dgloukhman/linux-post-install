@@ -21,7 +21,6 @@ sudo apt install --yes \
        	ulauncher \
        	wmctrl \
       	tilix \
-       	touchegg \
        	input-remapper \
        	ubuntu-restricted-extras \
 	gparted \
@@ -69,7 +68,7 @@ sudo snap install \
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
 
-flatpak install -y flathub com.github.joseexposito.touche com.google.Chrome;
+flatpak install -y com.google.Chrome;
 
 # Autoremove
 sudo apt autoremove -y
