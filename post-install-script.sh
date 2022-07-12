@@ -26,6 +26,7 @@ sudo apt install --yes \
 	gparted \
 	timeshift \
 	wifi-qr \
+	gnome-sushi \
 	;
 
 #docker
