@@ -27,6 +27,7 @@ sudo apt install --yes \
 	timeshift \
 	wifi-qr \
 	gnome-sushi \
+	gome-tweaks \
 	;
 
 #docker
