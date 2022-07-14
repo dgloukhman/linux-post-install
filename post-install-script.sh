@@ -28,6 +28,7 @@ sudo apt install --yes \
 	wifi-qr \
 	gnome-sushi \
 	gome-tweaks \
+	tree \
 	;
 
 #docker
