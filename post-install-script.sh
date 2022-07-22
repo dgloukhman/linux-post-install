@@ -1,9 +1,5 @@
 #!/bin/bash
 
-
-#repos
-sudo add-apt-repository ppa:agornostal/ulauncher
-
 #system apps
 sudo apt update;
 sudo apt upgrade --yes;
@@ -18,8 +14,6 @@ sudo apt install --yes \
        	python3 \
        	python3-pip \
        	python3-venv \
-       	ulauncher \
-       	wmctrl \
       	tilix \
        	input-remapper \
        	ubuntu-restricted-extras \
@@ -27,7 +21,7 @@ sudo apt install --yes \
 	timeshift \
 	wifi-qr \
 	gnome-sushi \
-	gome-tweaks \
+	gnome-tweaks \
 	tree \
 	;
 
@@ -55,23 +49,23 @@ sudo update-alternatives --set editor /usr/bin/vim.gtk3;
 #apps
 
 echo 'INSTALL APPS' 
-sudo snap install code node --classic;
-
-sudo snap install \
-       	bitwarden \
-       	okular \
-       	spotify \
-       	discord \
-       	telegram-desktop \
-       	slack \
-       	zoom-client \
-       	vlc \
-		;
 
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
 
-flatpak install -y com.google.Chrome;
+flatpak install -y \
+	com.google.Chrome \
+	com.spotify.Client \
+	com.discordapp.Discord \
+	org.videolan.VLC \
+	com.bitwarden.desktop \
+	org.telegram.desktop \
+	com.slack.Slack \
+	us.zoom.Zoom \
+	org.kde.okular \
+	com.vscodium.codium \
+	org.gnome.Cheese \
+	;
 
 # Autoremove
 sudo apt autoremove -y
