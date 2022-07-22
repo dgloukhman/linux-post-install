@@ -72,6 +72,8 @@ flatpak install -y \
 	org.kde.okular \
 	com.vscodium.codium \
 	org.gnome.Cheese \
+	net.ankiweb.Anki \
+	org.signal.Signal \
 	;
 
 # Autoremove
