@@ -1,10 +1,18 @@
 #!/bin/bash
 
-#system apps
-sudo apt update;
-sudo apt upgrade --yes;
 
-sudo apt install --yes \
+#nala 
+sudo apt update;
+sudo apt install -y wget;
+
+echo "deb http://deb.volian.org/volian/ scar main" | sudo tee /etc/apt/sources.list.d/volian-archive-scar-unstable.list
+wget -qO - https://deb.volian.org/volian/scar.key | sudo tee /etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
+
+sudo apt install -y nala;
+
+#system apps
+
+sudo nala install -y \
 	zsh \
        	vim-gtk3 \
        	git \
@@ -26,7 +34,7 @@ sudo apt install --yes \
 	;
 
 #docker
-sudo apt install --yes\
+sudo nala install -y\
     ca-certificates \
     curl \
     gnupg \
@@ -40,8 +48,8 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null;
 
-sudo apt update;
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin;
+sudo nala update;
+sudo nala install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin;
 
 # set text editor
 sudo update-alternatives --set editor /usr/bin/vim.gtk3;
@@ -49,7 +57,6 @@ sudo update-alternatives --set editor /usr/bin/vim.gtk3;
 #apps
 
 echo 'INSTALL APPS' 
-
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo;
 
@@ -68,7 +75,7 @@ flatpak install -y \
 	;
 
 # Autoremove
-sudo apt autoremove -y
+sudo nala autoremove -y
 
 #ohmyzsh
 
