@@ -80,6 +80,5 @@ sudo nala autoremove -y
 #ohmyzsh
 
 echo 'CHANGE SHELL'
-chsh -s $(which zsh);
-zsh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 
