@@ -82,3 +82,10 @@ nala autoremove -y
 echo 'CHANGE SHELL'
 sudo -u $SUDO_USER sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 
+#install anaconda3
+mkdir temp;
+cd temp;
+wget -O - https://www.anaconda.com/distribution/ 2>/dev/null | sed -ne 's@.*\(https:\/\/repo\.anaconda\.com\/archive\/Anaconda3-.*-Linux-x86_64\.sh\)\">64-Bit (x86) Installer.*@\1@p' | xargs wget;
+sudo -u sh *.sh
+cd ..;
+rm -rf temp;
