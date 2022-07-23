@@ -70,7 +70,6 @@ flatpak install -y \
 	com.slack.Slack \
 	us.zoom.Zoom \
 	org.kde.okular \
-	com.vscodium.codium \
 	org.gnome.Cheese \
 	net.ankiweb.Anki \
 	org.signal.Signal \
