@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  become: true
+  vars_files: 
+    - ./vars/vars.yml
+  roles:
+    - install_packages
+  #install
+    - gantsign.oh-my-zsh
+    - geerlingguy.docker
+    - stefangweichinger.ansible_rclone
+  #custom setup

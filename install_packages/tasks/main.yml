@@ -1,0 +1,67 @@
+---
+# tasks file for setup
+
+- name: Update and upgrade apt
+  ansible.builtin.apt:
+    update_cache: yes
+    upgrade: yes
+  notify: Restart system
+
+- name: Install packages
+  ansible.builtin.package:
+    name:
+      - bat
+      - jq
+      - zsh
+      - tree
+      - git
+      - htop
+      - vim-gtk3
+      - rsync
+      - tmux
+      - curl
+      - wget
+      - flatpak
+      - python3
+      - python3-pip
+      - python3-venv
+      - python3-argcomplete
+      - tilix
+      - input-remapper
+      - ubuntu-restricted-extras
+      - gparted
+      - timeshift
+      - wifi-qr
+      - gnome-sushi
+      - gnome-tweaks
+      - tree
+      - vagrant
+      - virtualbox
+      - mpv
+    state: latest
+
+- name: Add the flathub flatpak repository remote to the user installation
+  community.general.flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    method: user
+
+- name: install flatpak packages
+  community.general.flatpak:
+    method: user
+    name:
+      - org.chromium.Chromium
+      - com.spotify.Client
+      - com.discordapp.Discord
+      - org.videolan.VLC
+      - com.bitwarden.desktop
+      - org.telegram.desktop
+      - com.slack.Slack
+      - us.zoom.Zoom
+      - org.kde.okular
+      - org.gnome.Cheese
+      - net.ankiweb.Anki
+      - org.signal.Signal
+      - com.brave.Browser 
+    state: present

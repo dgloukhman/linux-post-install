@@ -1,0 +1,23 @@
+users:
+- username: "{{username}}"
+  oh_my_zsh:
+    theme: gianu
+    plugins:
+      - git
+      - docker-compose
+docker_edition: 'ce'
+docker_packages:
+    - "docker-{{ docker_edition }}"
+    - "docker-{{ docker_edition }}-cli"
+    - "containerd.io"
+docker_packages_state: present
+docker_install_compose_plugin: true
+docker_compose_package: docker-compose-plugin
+docker_compose_package_state: present
+docker_install_compose: false
+docker_users:
+  - "{{username}}"
+
+rclone_config_owner:
+   OWNER: "{{username}}"
+   GROUP: "{{username}}"

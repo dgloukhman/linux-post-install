@@ -1,0 +1,3 @@
+- src: gantsign.oh-my-zsh
+- src: geerlingguy.docker
+- src: stefangweichinger.ansible_rclone
